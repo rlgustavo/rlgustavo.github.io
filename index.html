@@ -3,301 +3,179 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>=Gustavo Lima - Portfólio</title>
+<title>Gustavo Lima — Professor & Desenvolvedor</title>
+<meta name="description" content="Portfólio de Gustavo Lima, professor de jogos digitais, programação e tecnologia." />
 
-<style>
-/* -------------------------------------- */
-/* PALETA ROXO-TECH ESTILO NUBANK */
-/* -------------------------------------- */
-:root {
-  --bg: #0a0611;
-  --bg2: #130a22;
-  --card: #1d1230;
-  --card2: #25163f;
-  --accent: #b069ff;
-  --accent2: #cda0ff;
-  --text: #ffffff;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-/* -------------------------------------- */
-/* RESET */
-/* -------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, var(--bg), var(--bg2));
-  color: var(--text);
-  overflow-x: hidden;
-  padding-bottom: 100px;
-}
-
-/* -------------------------------------- */
-/* CABEÇALHO COM DIGITAÇÃO */
-/* -------------------------------------- */
-header {
-  text-align: center;
-  padding: 80px 20px;
-  animation: fadeIn 1.5s ease;
-}
-
-.profile {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent2);
-  box-shadow: 0 0 15px var(--accent);
-}
-
-/* TEXTO DIGITADO */
-#typed {
-  font-size: 2.5rem;
-  margin-top: 20px;
-  color: var(--accent2);
-  font-weight: 700;
-  min-height: 60px;
-  border-right: 2px solid var(--accent2);
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 4s steps(30, end) forwards, blink 0.6s infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-header p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-/* -------------------------------------- */
-/* SEÇÕES */
-/* -------------------------------------- */
-.section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 25px;
-  background: var(--card);
-  border-radius: 18px;
-  box-shadow: 0 0 20px rgba(180, 110, 255, 0.2);
-  animation: fadeUp 1s ease;
-}
-
-.section h2 {
-  font-size: 1.9rem;
-  color: var(--accent2);
-  margin-bottom: 10px;
-}
-
-/* -------------------------------------- */
-/* LOGOS DAS ESCOLAS */
-/* -------------------------------------- */
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 25px;
-}
-
-.logos img {
-  width: 120px;
-  transition: 0.3s;
-  filter: drop-shadow(0 0 10px var(--accent));
-}
-
-.logos img:hover {
-  transform: scale(1.1);
-}
-
-/* -------------------------------------- */
-/* AVANÇA TECH CAIXA */
-/* -------------------------------------- */
-.course-box {
-  background: linear-gradient(135deg, var(--card2), #2d1a50);
-  margin: 20px 0;
-  padding: 22px;
-  border-radius: 15px;
-  border: 1px solid var(--accent2);
-  box-shadow: 0 0 12px rgba(190, 140, 255, 0.2);
-  transition: 0.3s ease;
-}
-
-.course-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 22px rgba(200, 150, 255, 0.4);
-}
-
-/* -------------------------------------- */
-/* TIMELINE MODERNA */
-/* -------------------------------------- */
-.timeline {
-  list-style: none;
-  padding-left: 25px;
-  border-left: 3px solid var(--accent2);
-}
-
-.timeline li {
-  margin: 25px 0;
-  padding-left: 20px;
-  position: relative;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  opacity: 0;
-  animation: slideFade 1s forwards;
-}
-
-.timeline li::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: var(--accent2);
-  border-radius: 50%;
-  position: absolute;
-  left: -28px;
-  top: 6px;
-  box-shadow: 0 0 10px var(--accent2);
-}
-
-@keyframes slideFade {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* -------------------------------------- */
-/* LINKS */
-/* -------------------------------------- */
-a {
-  color: var(--accent2);
-  text-decoration: none;
-  font-weight: bold;
-}
-a:hover {
-  opacity: 0.7;
-}
-
-/* -------------------------------------- */
-/* FOOTER */
-/* -------------------------------------- */
-.footer {
-  margin-top: 80px;
-  text-align: center;
-  opacity: 0.7;
-  font-size: 1.1rem;
-}
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- ========================================================= -->
-<!-- CABEÇALHO COM FOTO + TEXTO DIGITANDO -->
-<!-- ========================================================= -->
-<header>
-  <img src="./img/Profile.png" class="profile" alt="Foto de Gustavo" />
-  <div>FIZ UM TESTE NO COMPUTADOR DA MINHA CASA Lima</div>
-  <p>Professor de Jogos Digitais, Programação e Tecnologia</p>
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__logo">GL<span>.</span></a>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#sobre" class="nav__link">01 · Sobre</a></li>
+    <li><a href="#avanca" class="nav__link">02 · Avança Tech</a></li>
+    <li><a href="#jornada" class="nav__link">03 · Jornada</a></li>
+    <li><a href="#github" class="nav__link">04 · Contato</a></li>
+  </ul>
+</nav>
+
+<!-- progress bar de scroll -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===================== HERO ===================== -->
+<header id="top" class="hero">
+  <div class="hero__glow"></div>
+
+  <div class="hero__content">
+    <img src="./img/Profile.png" class="hero__photo" alt="Foto de Gustavo Lima" />
+
+    <p class="hero__eyebrow">// portfolio.init()</p>
+    <h1 class="hero__name">Gustavo Lima</h1>
+
+    <div class="hero__terminal">
+      <div class="hero__terminal-bar">
+        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+        <span class="hero__terminal-title">sobre-mim.js</span>
+      </div>
+      <div class="hero__terminal-body">
+        <span class="hero__prompt">const gustavo = {</span>
+        <span class="hero__line">&nbsp;&nbsp;papel:&nbsp;"<span id="typed"></span><span class="cursor">|</span>",</span>
+        <span class="hero__prompt">}</span>
+      </div>
+    </div>
+
+    <p class="hero__tagline">Ensinando tecnologia de um jeito leve, prático e divertido.</p>
+
+    <div class="hero__cta">
+      <a href="#github" class="btn btn--primary">Fale comigo</a>
+      <a href="#sobre" class="btn btn--ghost">Ver trabalho ↓</a>
+    </div>
+  </div>
 </header>
 
-<!-- ========================================================= -->
-<!-- SOBRE MIM -->
-<!-- ========================================================= -->
-<section class="section">
-  <h2>Sobre mim</h2>
-  <p>
-    Sou desenvolvedor e educador na área de tecnologia, com experiência no ensino de programação, 
-    robótica e desenvolvimento de jogos para crianças, adolescentes e adultos. Acredito que aprender 
-    tecnologia pode ser leve, divertido e transformador — e dedico minha carreira a tornar isso real 
+<main>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="section" id="sobre">
+  <p class="section__eyebrow">01</p>
+  <h2 class="section__title">Sobre mim</h2>
+  <p class="section__text">
+    Sou desenvolvedor e educador na área de tecnologia, com experiência no ensino de programação,
+    robótica e desenvolvimento de jogos para crianças, adolescentes e adultos. Acredito que aprender
+    tecnologia pode ser leve, divertido e transformador — e dedico minha carreira a tornar isso real
     para cada aluno.
   </p>
 
-  <p style="margin-top: 10px;">
-    Atualmente ensino em instituições tradicionais e internacionais:
-  </p>
+  <p class="section__text section__text--muted">Atualmente ensino em instituições tradicionais e internacionais:</p>
 
   <div class="logos">
-    <img src="./img/MapleBear.png" />
-    <img src="./img/Avenues.png" />
-    <img src="./img/Supergeeks.png" />
+    <div class="logos__item"><img src="./img/MapleBear.png" alt="Maple Bear Canadian School" /></div>
+    <div class="logos__item"><img src="./img/Avenues.png" alt="Avenues" /></div>
+    <div class="logos__item"><img src="./img/Supergeeks.png" alt="SuperGeeks" /></div>
   </div>
 </section>
 
-<!-- ========================================================= -->
-<!-- AVANÇA TECH -->
-<!-- ========================================================= -->
-<section class="section">
-  <h2>Avança Tech</h2>
+<!-- ===================== AVANÇA TECH ===================== -->
+<section class="section" id="avanca">
+  <p class="section__eyebrow">02</p>
+  <h2 class="section__title">Avança Tech</h2>
 
-  <p>
-    No <strong>Avança Tech</strong>, programa profissionalizante da Fundação Paulistana, 
-    auxilio jovens e adultos a ingressarem no mercado de tecnologia através do ensino prático 
+  <p class="section__text">
+    No <strong>Avança Tech</strong>, programa profissionalizante da Fundação Paulistana,
+    auxilio jovens e adultos a ingressarem no mercado de tecnologia através do ensino prático
     de programação e desenvolvimento de software.
   </p>
 
-  <p>Sou responsável pelos seguintes cursos:</p>
+  <p class="section__text section__text--muted">Sou responsável pelos seguintes cursos:</p>
 
-  <div class="course-box">
-    <h3 style="color: var(--accent2);">📌 Desenvolvimento BACK-END JAVA</h3>
-  </div>
+  <div class="courses">
+    <div class="course-card">
+      <span class="course-card__tag">back-end</span>
+      <h3 class="course-card__title">Desenvolvimento Java</h3>
+      <p class="course-card__desc">Lógica de programação, POO e construção de APIs do zero ao deploy.</p>
+    </div>
 
-  <div class="course-box">
-    <h3 style="color: var(--accent2);">📌 Desenvolvimento BACK-END PHP</h3>
+    <div class="course-card">
+      <span class="course-card__tag">back-end</span>
+      <h3 class="course-card__title">Desenvolvimento PHP</h3>
+      <p class="course-card__desc">Fundamentos web, bancos de dados e sistemas dinâmicos server-side.</p>
+    </div>
   </div>
 </section>
 
+<!-- ===================== JORNADA ===================== -->
+<section class="section" id="jornada">
+  <p class="section__eyebrow">03</p>
+  <h2 class="section__title">Jornada profissional</h2>
 
-
-<!-- ========================================================= -->
-<!-- JORNADA PROFISSIONAL -->
-<!-- ========================================================= -->
-<section class="section">
-  <h2>Jornada profissional</h2>
   <ul class="timeline">
-    <li>Iniciei como desenvolvedor, criando jogos, sites e aplicações próprias.</li>
-    <li>Atuei como professor de jogos e robótica na SuperGeeks.</li>
-    <li>Aprimorei minha metodologia em escolas internacionais como a Avenues.</li>
-    <li>Atualmente ensino tecnologia na Maple Bear e no Avança Tech.</li>
-    <li>Formado em Programação de Jogos Digitais pela Fatec São Caetano.</li>
+    <li class="timeline__item">
+      <span class="timeline__dot"></span>
+      <p>Iniciei como desenvolvedor, criando jogos, sites e aplicações próprias.</p>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__dot"></span>
+      <p>Atuei como professor de jogos e robótica na SuperGeeks.</p>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__dot"></span>
+      <p>Aprimorei minha metodologia em escolas internacionais como a Avenues.</p>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__dot"></span>
+      <p>Atualmente ensino tecnologia na Maple Bear e no Avança Tech.</p>
+    </li>
+    <li class="timeline__item">
+      <span class="timeline__dot"></span>
+      <p>Formado em Programação de Jogos Digitais pela Fatec São Caetano.</p>
+    </li>
   </ul>
 </section>
 
-<!-- ========================================================= -->
-<!-- GITHUB -->
-<!-- ========================================================= -->
-<section class="section">
-  <h2>GitHub & Portfólio</h2>
-  <p>Acompanhe meus projetos, jogos e materiais didáticos:</p>
+<!-- ===================== GITHUB / CONTATO ===================== -->
+<section class="section" id="github">
+  <p class="section__eyebrow">04</p>
+  <h2 class="section__title">GitHub & Portfólio</h2>
+  <p class="section__text section__text--muted">Acompanhe meus projetos, jogos e materiais didáticos:</p>
 
-  <p>
-    ➜ <a href="https://github.com/rlgustavo" target="_blank">github.com/rlgustavo</a><br>
-    ➜ <a href="https://linkedin.com/in/rlgustavo" target="_blank">linkedin.com/in/rlgustavo</a><br>
-    ➜ <a href="https://rlgustavo.itch.io" target="_blank">rlgustavo.itch.io</a>
-  </p>
+  <div class="links">
+    <a href="https://github.com/rlgustavo" target="_blank" rel="noopener" class="link-card">
+      <span class="link-card__label">GitHub</span>
+      <span class="link-card__value">github.com/rlgustavo</span>
+    </a>
+    <a href="https://linkedin.com/in/rlgustavo" target="_blank" rel="noopener" class="link-card">
+      <span class="link-card__label">LinkedIn</span>
+      <span class="link-card__value">linkedin.com/in/rlgustavo</span>
+    </a>
+    <a href="https://rlgustavo.itch.io" target="_blank" rel="noopener" class="link-card">
+      <span class="link-card__label">itch.io</span>
+      <span class="link-card__value">rlgustavo.itch.io</span>
+    </a>
+  </div>
 </section>
 
-<!-- ========================================================= -->
-<!-- FOOTER -->
-<!-- ========================================================= -->
-<div class="footer">
-  “Tecnologia não é sobre máquinas. É sobre pessoas criando possibilidades.”
-</div>
+</main>
 
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <p class="footer__quote">"Tecnologia não é sobre máquinas. É sobre pessoas criando possibilidades."</p>
+  <p class="footer__credit">Construído com HTML, CSS &amp; JS · assistido por <a href="https://claude.com" target="_blank" rel="noopener">Claude</a></p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
