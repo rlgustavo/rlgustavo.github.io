@@ -1,6 +1,6 @@
-# 🟣 Gustavo Lima — Portfólio
+# 🟣 Gustavo Lima — Links
 
-Portfólio pessoal de **Gustavo Lima**, professor de Jogos Digitais, Programação e Tecnologia, e desenvolvedor full stack.
+Página de links (estilo Linktree) de **Gustavo Lima**, professor de Jogos Digitais, Programação e Tecnologia. É o ponto de partida único que ele compartilha com quem quer conhecer seu trabalho.
 
 🔗 **Ver online:** _adicione aqui o link do GitHub Pages depois de publicar_
 
@@ -11,9 +11,9 @@ Portfólio pessoal de **Gustavo Lima**, professor de Jogos Digitais, Programaç�
 Site em HTML, CSS e JavaScript puros (sem frameworks e sem build), com:
 
 - Tema roxo-tech dark, com efeito de "terminal" digitando os papéis do Gustavo (professor, dev, educador);
-- Menu com destaque automático da seção visível e versão mobile com hamburguer;
-- Barra de progresso de leitura, botão "voltar ao topo" e animações de entrada ao rolar a página;
-- Layout 100% responsivo, do celular ao desktop.
+- Pilha de links estilo Linktree (GitHub, LinkedIn, itch.io + um card "em breve" para novos projetos);
+- Faixa discreta com os logos das escolas onde leciona;
+- Animações de entrada em cascata e layout 100% responsivo, do celular ao desktop.
 
 ## 🗂️ Estrutura
 
@@ -39,7 +39,7 @@ Praticamente tudo pode ser ajustado sem tocar na lógica do site:
 | Cores do site                    | Bloco `:root` no topo de `style.css`                     |
 | Fontes                           | Variáveis `--font-*` em `style.css` (+ link no `<head>`) |
 | Textos que aparecem digitando    | Lista `ROLES` no topo de `script.js`                     |
-| Textos das seções, links, cursos | Diretamente no `index.html`                               |
+| Adicionar/remover um link        | Copiar ou apagar um bloco `<a class="link-item">` dentro de `<nav class="links-stack">` no `index.html` |
 | Fotos/logos                      | Substituir os arquivos em `img/` mantendo o mesmo nome    |
 
 ## 🚀 Publicando no GitHub Pages

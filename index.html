@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gustavo Lima — Professor & Desenvolvedor</title>
-<meta name="description" content="Portfólio de Gustavo Lima, professor de jogos digitais, programação e tecnologia." />
+<title>Gustavo Lima — Links</title>
+<meta name="description" content="Gustavo Lima — professor de jogos digitais, programação e tecnologia. Todos os meus links em um só lugar." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,166 +15,93 @@
 
 <body>
 
-<!-- ===================== NAV ===================== -->
-<nav class="nav" id="nav">
-  <a href="#top" class="nav__logo">GL<span>.</span></a>
+<div class="glow-bg"></div>
 
-  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
-    <span></span><span></span><span></span>
-  </button>
+<main class="linkpage">
 
-  <ul class="nav__links" id="navLinks">
-    <li><a href="#sobre" class="nav__link">01 · Sobre</a></li>
-    <li><a href="#avanca" class="nav__link">02 · Avança Tech</a></li>
-    <li><a href="#jornada" class="nav__link">03 · Jornada</a></li>
-    <li><a href="#github" class="nav__link">04 · Contato</a></li>
-  </ul>
-</nav>
+  <img src="./img/Profile.png" class="linkpage__photo" alt="Foto de Gustavo Lima" />
 
-<!-- progress bar de scroll -->
-<div class="scroll-progress" id="scrollProgress"></div>
+  <p class="linkpage__eyebrow">// portfolio.init()</p>
+  <h1 class="linkpage__name">Gustavo Lima</h1>
 
-<!-- ===================== HERO ===================== -->
-<header id="top" class="hero">
-  <div class="hero__glow"></div>
-
-  <div class="hero__content">
-    <img src="./img/Profile.png" class="hero__photo" alt="Foto de Gustavo Lima" />
-
-    <p class="hero__eyebrow">// portfolio.init()</p>
-    <h1 class="hero__name">Gustavo Lima</h1>
-
-    <div class="hero__terminal">
-      <div class="hero__terminal-bar">
-        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-        <span class="hero__terminal-title">sobre-mim.js</span>
-      </div>
-      <div class="hero__terminal-body">
-        <span class="hero__prompt">const gustavo = {</span>
-        <span class="hero__line">&nbsp;&nbsp;papel:&nbsp;"<span id="typed"></span><span class="cursor">|</span>",</span>
-        <span class="hero__prompt">}</span>
-      </div>
+  <div class="linkpage__terminal">
+    <div class="linkpage__terminal-bar">
+      <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+      <span class="linkpage__terminal-title">sobre-mim.js</span>
     </div>
-
-    <p class="hero__tagline">Ensinando tecnologia de um jeito leve, prático e divertido.</p>
-
-    <div class="hero__cta">
-      <a href="#github" class="btn btn--primary">Fale comigo</a>
-      <a href="#sobre" class="btn btn--ghost">Ver trabalho ↓</a>
+    <div class="linkpage__terminal-body">
+      <span class="prompt">const gustavo = {</span>
+      <span class="line">&nbsp;&nbsp;papel:&nbsp;"<span id="typed"></span><span class="cursor">|</span>",</span>
+      <span class="prompt">}</span>
     </div>
   </div>
-</header>
 
-<main>
+  <p class="linkpage__tagline">Bem-vindo(a) ao meu ponto de partida na internet 👋</p>
 
-<!-- ===================== SOBRE ===================== -->
-<section class="section" id="sobre">
-  <p class="section__eyebrow">01</p>
-  <h2 class="section__title">Sobre mim</h2>
-  <p class="section__text">
-    Sou desenvolvedor e educador na área de tecnologia, com experiência no ensino de programação,
-    robótica e desenvolvimento de jogos para crianças, adolescentes e adultos. Acredito que aprender
-    tecnologia pode ser leve, divertido e transformador — e dedico minha carreira a tornar isso real
-    para cada aluno.
-  </p>
+  <!-- ===================== LINKS PRINCIPAIS ===================== -->
+  <nav class="links-stack" aria-label="Meus links">
 
-  <p class="section__text section__text--muted">Atualmente ensino em instituições tradicionais e internacionais:</p>
-
-  <div class="logos">
-    <div class="logos__item"><img src="./img/MapleBear.png" alt="Maple Bear Canadian School" /></div>
-    <div class="logos__item"><img src="./img/Avenues.png" alt="Avenues" /></div>
-    <div class="logos__item"><img src="./img/Supergeeks.png" alt="SuperGeeks" /></div>
-  </div>
-</section>
-
-<!-- ===================== AVANÇA TECH ===================== -->
-<section class="section" id="avanca">
-  <p class="section__eyebrow">02</p>
-  <h2 class="section__title">Avança Tech</h2>
-
-  <p class="section__text">
-    No <strong>Avança Tech</strong>, programa profissionalizante da Fundação Paulistana,
-    auxilio jovens e adultos a ingressarem no mercado de tecnologia através do ensino prático
-    de programação e desenvolvimento de software.
-  </p>
-
-  <p class="section__text section__text--muted">Sou responsável pelos seguintes cursos:</p>
-
-  <div class="courses">
-    <div class="course-card">
-      <span class="course-card__tag">back-end</span>
-      <h3 class="course-card__title">Desenvolvimento Java</h3>
-      <p class="course-card__desc">Lógica de programação, POO e construção de APIs do zero ao deploy.</p>
-    </div>
-
-    <div class="course-card">
-      <span class="course-card__tag">back-end</span>
-      <h3 class="course-card__title">Desenvolvimento PHP</h3>
-      <p class="course-card__desc">Fundamentos web, bancos de dados e sistemas dinâmicos server-side.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== JORNADA ===================== -->
-<section class="section" id="jornada">
-  <p class="section__eyebrow">03</p>
-  <h2 class="section__title">Jornada profissional</h2>
-
-  <ul class="timeline">
-    <li class="timeline__item">
-      <span class="timeline__dot"></span>
-      <p>Iniciei como desenvolvedor, criando jogos, sites e aplicações próprias.</p>
-    </li>
-    <li class="timeline__item">
-      <span class="timeline__dot"></span>
-      <p>Atuei como professor de jogos e robótica na SuperGeeks.</p>
-    </li>
-    <li class="timeline__item">
-      <span class="timeline__dot"></span>
-      <p>Aprimorei minha metodologia em escolas internacionais como a Avenues.</p>
-    </li>
-    <li class="timeline__item">
-      <span class="timeline__dot"></span>
-      <p>Atualmente ensino tecnologia na Maple Bear e no Avança Tech.</p>
-    </li>
-    <li class="timeline__item">
-      <span class="timeline__dot"></span>
-      <p>Formado em Programação de Jogos Digitais pela Fatec São Caetano.</p>
-    </li>
-  </ul>
-</section>
-
-<!-- ===================== GITHUB / CONTATO ===================== -->
-<section class="section" id="github">
-  <p class="section__eyebrow">04</p>
-  <h2 class="section__title">GitHub & Portfólio</h2>
-  <p class="section__text section__text--muted">Acompanhe meus projetos, jogos e materiais didáticos:</p>
-
-  <div class="links">
-    <a href="https://github.com/rlgustavo" target="_blank" rel="noopener" class="link-card">
-      <span class="link-card__label">GitHub</span>
-      <span class="link-card__value">github.com/rlgustavo</span>
+    <a href="https://github.com/rlgustavo" target="_blank" rel="noopener" class="link-item">
+      <span class="link-item__icon">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.83-1.35-3.83-1.35-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.05-.12-.29-.5-1.45.11-3.02 0 0 .96-.31 3.13 1.16.91-.25 1.88-.38 2.85-.39.97 0 1.94.13 2.85.39 2.17-1.47 3.12-1.16 3.12-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.81 1.17 3.05 0 4.37-2.68 5.34-5.22 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.53 11.53 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+      </span>
+      <span class="link-item__text">
+        <span class="link-item__title">GitHub</span>
+        <span class="link-item__desc">Meus projetos, jogos e materiais didáticos</span>
+      </span>
+      <span class="link-item__arrow">→</span>
     </a>
-    <a href="https://linkedin.com/in/rlgustavo" target="_blank" rel="noopener" class="link-card">
-      <span class="link-card__label">LinkedIn</span>
-      <span class="link-card__value">linkedin.com/in/rlgustavo</span>
+
+    <a href="https://linkedin.com/in/rlgustavo" target="_blank" rel="noopener" class="link-item">
+      <span class="link-item__icon">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </span>
+      <span class="link-item__text">
+        <span class="link-item__title">LinkedIn</span>
+        <span class="link-item__desc">Minha trajetória profissional</span>
+      </span>
+      <span class="link-item__arrow">→</span>
     </a>
-    <a href="https://rlgustavo.itch.io" target="_blank" rel="noopener" class="link-card">
-      <span class="link-card__label">itch.io</span>
-      <span class="link-card__value">rlgustavo.itch.io</span>
+
+    <a href="https://rlgustavo.itch.io" target="_blank" rel="noopener" class="link-item">
+      <span class="link-item__icon">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.32 3.64C3.05 4.34 0.5 7.26 0.5 8c0 1.4 1.32 2.62 2.5 2.62.98 0 1.98-.9 2.5-1.75.52.85 1.52 1.75 2.5 1.75 1 0 2-.9 2.5-1.75.52.85 1.5 1.75 2.5 1.75s1.98-.9 2.5-1.75c.52.85 1.52 1.75 2.5 1.75 1.18 0 2.5-1.22 2.5-2.62 0-.74-2.55-3.66-3.82-4.36C17.24 3.24 15 3 12 3s-5.24.24-7.68.64Zm.34 6.5c-.5.32-1.1.5-1.66.5-.42 0-.8-.09-1.15-.25-.15 3.6-.28 7.36.42 8.3.9 1.2 4.6 1.31 5.7 1.31.13-1 .32-3.3.35-4.02-1.42-.24-2.5-1.16-3.03-2.16a4.6 4.6 0 0 1-.63-3.68Zm14.68 0a4.6 4.6 0 0 1-.63 3.68c-.53 1-1.6 1.92-3.03 2.16.03.72.22 3.02.35 4.02 1.1 0 4.8-.11 5.7-1.31.7-.94.57-4.7.42-8.3-.35.16-.73.25-1.15.25-.56 0-1.16-.18-1.66-.5Zm-9.9.98c-.4.6-1.05 1.14-1.9 1.36-.03.5-.13 2.28-.13 2.86 0 .84.07 2.35.14 2.9.5.1 1.55.16 2.55.16s2.05-.06 2.55-.16c.07-.55.14-2.06.14-2.9 0-.58-.1-2.36-.13-2.86-.85-.22-1.5-.76-1.9-1.36-.13-.2-.24-.4-.32-.6-.08.2-.19.4-.32.6Z"/></svg>
+      </span>
+      <span class="link-item__text">
+        <span class="link-item__title">itch.io</span>
+        <span class="link-item__desc">Jogos que já criei</span>
+      </span>
+      <span class="link-item__arrow">→</span>
     </a>
+
+    <a href="#" class="link-item link-item--soon" aria-disabled="true">
+      <span class="link-item__icon">✦</span>
+      <span class="link-item__text">
+        <span class="link-item__title">Novos projetos</span>
+        <span class="link-item__desc">Em breve, mais links por aqui</span>
+      </span>
+      <span class="link-item__arrow">···</span>
+    </a>
+
+  </nav>
+
+  <!-- ===================== ONDE ENSINO ===================== -->
+  <div class="teaching">
+    <p class="teaching__label">Onde ensino atualmente</p>
+    <div class="teaching__logos">
+      <img src="./img/MapleBear.png" alt="Maple Bear Canadian School" />
+      <img src="./img/Avenues.png" alt="Avenues" />
+      <img src="./img/Supergeeks.png" alt="SuperGeeks" />
+    </div>
+    <p class="teaching__extra">+ Avança Tech <span>(turmas de Java e PHP)</span></p>
   </div>
-</section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <p class="footer__quote">"Tecnologia não é sobre máquinas. É sobre pessoas criando possibilidades."</p>
   <p class="footer__credit">Construído com HTML, CSS &amp; JS · assistido por <a href="https://claude.com" target="_blank" rel="noopener">Claude</a></p>
 </footer>
-
-<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
 
 <script src="script.js"></script>
 </body>
