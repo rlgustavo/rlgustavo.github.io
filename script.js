@@ -2,9 +2,9 @@
    CONFIG — edite esta lista para trocar os textos que aparecem digitando
    ===================================================================== */
 const ROLES = [
-  "Professor de Jogos Digitais",
+  "Professor Inteligencia Artificial",
   "Desenvolvedor Full Stack",
-  "Educador em Tecnologia",
+  "Educador em Games",
   "Instrutor de Programação"
 ];
 
