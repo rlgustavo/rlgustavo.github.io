@@ -1,109 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gustavo Lima — Links</title>
-<meta name="description" content="Gustavo Lima — professor de jogos digitais, programação e tecnologia. Todos os meus links em um só lugar." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0714">
+  <meta name="description" content="Aprenda programação, desenvolvimento de jogos e tecnologia com aulas online personalizadas com Gustavo Lima.">
+  <title>Aulas Online de Programação | Gustavo Lima</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="ambient ambient--one" aria-hidden="true"></div>
+  <div class="ambient ambient--two" aria-hidden="true"></div>
 
-<div class="glow-bg"></div>
-
-<main class="linkpage">
-
-  <img src="./img/Profile.png" class="linkpage__photo" alt="Foto de Gustavo Lima" />
-
-  <p class="linkpage__eyebrow">// Welcome.init()</p>
-  <h1 class="linkpage__name">Gustavo Lima</h1>
-
-  <div class="linkpage__terminal">
-    <div class="linkpage__terminal-bar">
-      <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-      <span class="linkpage__terminal-title">sobre-mim.js</span>
-    </div>
-    <div class="linkpage__terminal-body">
-      <span class="prompt">const gustavo = {</span>
-      <span class="line">&nbsp;&nbsp;papel:&nbsp;"<span id="typed"></span><span class="cursor">|</span>",</span>
-      <span class="prompt">}</span>
-    </div>
-  </div>
-
-  <p class="linkpage__tagline">👾 Links Úteis 👾</p>
-
-  <!-- ===================== LINKS PRINCIPAIS ===================== -->
-  <nav class="links-stack" aria-label="Meus links">
-
-    <a href="https://github.com/rlgustavo" target="_blank" rel="noopener" class="link-item">
-      <span class="link-item__icon">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.83-1.35-3.83-1.35-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.05-.12-.29-.5-1.45.11-3.02 0 0 .96-.31 3.13 1.16.91-.25 1.88-.38 2.85-.39.97 0 1.94.13 2.85.39 2.17-1.47 3.12-1.16 3.12-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.81 1.17 3.05 0 4.37-2.68 5.34-5.22 5.62.41.36.77 1.06.77 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A11.53 11.53 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
-      </span>
-      <span class="link-item__text">
-        <span class="link-item__title">GitHub</span>
-        <span class="link-item__desc">Meus projetos, jogos e materiais didáticos</span>
-      </span>
-      <span class="link-item__arrow">→</span>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Gustavo Lima, início">
+      <span class="brand__mark">&lt;GL/&gt;</span>
+      <span>Gustavo Lima<span class="brand__dot">.</span></span>
     </a>
+    <nav class="header-nav" aria-label="Navegação principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#conteudos">O que você aprende</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="button button--small button--outline" href="https://www.superprof.com.br/ir/17247433-715a6d" target="_blank" rel="noopener noreferrer">Falar sobre aulas <span aria-hidden="true">↗</span></a>
+  </header>
 
-    <a href="https://linkedin.com/in/rlgustavo" target="_blank" rel="noopener" class="link-item">
-      <span class="link-item__icon">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-      </span>
-      <span class="link-item__text">
-        <span class="link-item__title">LinkedIn</span>
-        <span class="link-item__desc">Minha trajetória profissional</span>
-      </span>
-      <span class="link-item__arrow">→</span>
-    </a>
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero__content">
+        <p class="eyebrow"><span class="status-dot"></span> AULAS ONLINE PERSONALIZADAS</p>
+        <h1>Transforme sua curiosidade em <span class="gradient-text">habilidade de verdade.</span></h1>
+        <p class="hero__lead">Aprenda programação, desenvolvimento de jogos e tecnologia com aulas práticas, explicações claras e um caminho pensado para o seu nível.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="https://www.superprof.com.br/ir/17247433-715a6d" target="_blank" rel="noopener noreferrer">Quero conhecer as aulas <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#conteudos">Explorar conteúdos <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero__proof">
+          <div class="proof-item"><span class="proof-icon">⌘</span><span><strong>Aprendizado prático</strong><small>Menos decoreba, mais projetos</small></span></div>
+          <div class="proof-item"><span class="proof-icon">◈</span><span><strong>Ritmo personalizado</strong><small>Conteúdo de acordo com seu nível</small></span></div>
+        </div>
+      </div>
 
-    <a href="https://rlgustavo.itch.io" target="_blank" rel="noopener" class="link-item">
-      <span class="link-item__icon">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.32 3.64C3.05 4.34 0.5 7.26 0.5 8c0 1.4 1.32 2.62 2.5 2.62.98 0 1.98-.9 2.5-1.75.52.85 1.52 1.75 2.5 1.75 1 0 2-.9 2.5-1.75.52.85 1.5 1.75 2.5 1.75s1.98-.9 2.5-1.75c.52.85 1.52 1.75 2.5 1.75 1.18 0 2.5-1.22 2.5-2.62 0-.74-2.55-3.66-3.82-4.36C17.24 3.24 15 3 12 3s-5.24.24-7.68.64Zm.34 6.5c-.5.32-1.1.5-1.66.5-.42 0-.8-.09-1.15-.25-.15 3.6-.28 7.36.42 8.3.9 1.2 4.6 1.31 5.7 1.31.13-1 .32-3.3.35-4.02-1.42-.24-2.5-1.16-3.03-2.16a4.6 4.6 0 0 1-.63-3.68Zm14.68 0a4.6 4.6 0 0 1-.63 3.68c-.53 1-1.6 1.92-3.03 2.16.03.72.22 3.02.35 4.02 1.1 0 4.8-.11 5.7-1.31.7-.94.57-4.7.42-8.3-.35.16-.73.25-1.15.25-.56 0-1.16-.18-1.66-.5Zm-9.9.98c-.4.6-1.05 1.14-1.9 1.36-.03.5-.13 2.28-.13 2.86 0 .84.07 2.35.14 2.9.5.1 1.55.16 2.55.16s2.05-.06 2.55-.16c.07-.55.14-2.06.14-2.9 0-.58-.1-2.36-.13-2.86-.85-.22-1.5-.76-1.9-1.36-.13-.2-.24-.4-.32-.6-.08.2-.19.4-.32.6Z"/></svg>
-      </span>
-      <span class="link-item__text">
-        <span class="link-item__title">itch.io</span>
-        <span class="link-item__desc">Jogos que já criei</span>
-      </span>
-      <span class="link-item__arrow">→</span>
-    </a>
+      <div class="hero-card" aria-label="Prévia ilustrativa de código">
+        <div class="code-window">
+          <div class="code-window__top"><div class="window-dots"><i></i><i></i><i></i></div><span>seu-futuro.dev</span><span class="window-top__right">● online</span></div>
+          <div class="code-window__body">
+            <p class="code-comment">// Toda jornada começa com o primeiro passo.</p>
+            <p><span class="code-purple">const</span> <span class="code-blue">seuProjeto</span> = {</p>
+            <p class="indent">ideia: <span class="code-green">"sua curiosidade"</span>,</p>
+            <p class="indent">pratica: <span class="code-green">"mão na massa"</span>,</p>
+            <p class="indent">progresso: <span class="code-orange">"constante"</span></p>
+            <p>};</p>
+            <p class="code-spacer"></p>
+            <p><span class="code-purple">function</span> <span class="code-blue">aprender</span>() {</p>
+            <p class="indent"> <span class="code-purple">return</span> <span class="code-green">"Vamos construir?"</span>;</p>
+            <p>}</p>
+            <div class="code-result"><span>▶</span> Seu próximo projeto começa aqui.</div>
+          </div>
+        </div>
+        <div class="floating-chip floating-chip--top">✦ Aprenda criando</div>
+        <div class="floating-chip floating-chip--bottom"><span class="chip-dot"></span> Do básico ao projeto</div>
+      </div>
+    </section>
 
-    <a href="#" class="link-item link-item--soon" aria-disabled="true">
-      <span class="link-item__icon">✦</span>
-      <span class="link-item__text">
-        <span class="link-item__title">Novos projetos</span>
-        <span class="link-item__desc">Em breve, mais links por aqui</span>
-      </span>
-      <span class="link-item__arrow">···</span>
-    </a>
+    <section class="trust-strip section-wrap" aria-label="Características das aulas">
+      <span>PROGRAMAÇÃO</span><b>✦</b><span>DESENVOLVIMENTO DE JOGOS</span><b>✦</b><span>TECNOLOGIA E IA</span>
+    </section>
 
-  </nav>
+    <section class="section section-wrap" id="como-funciona">
+      <div class="section-heading">
+        <p class="eyebrow">SUA JORNADA COMEÇA AQUI</p>
+        <h2>Aprender tecnologia pode ser <span class="gradient-text">mais simples do que parece.</span></h2>
+        <p>Você não precisa chegar sabendo tudo. As aulas são organizadas para ajudar você a entender os fundamentos e praticar com orientação.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon">◎</div><h3>Entendemos seu objetivo</h3><p>Conversamos sobre seu nível, seus interesses e o que você quer construir ou aprender.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon">⌘</div><h3>Aprendemos na prática</h3><p>Os conceitos são explicados com exemplos e exercícios para você acompanhar cada etapa.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon">↗</div><h3>Evoluímos com projetos</h3><p>Você pratica, tira dúvidas e desenvolve suas habilidades gradualmente, no seu ritmo.</p></article>
+      </div>
+    </section>
 
-  <!-- ===================== ONDE ENSINO ===================== -->
-  <div class="teaching">
-    <p class="teaching__label">Onde ensino atualmente</p>
-    <div class="teaching__logos">
-      <img src="./img/MapleBear.png" alt="Maple Bear Canadian School" />
-      <img src="./img/Avenues.png" alt="Avenues" />
-      <img src="./img/Supergeeks.png" alt="SuperGeeks" />
-    </div>
-    <p class="teaching__extra">+ Avança Tech <span>(turmas de Java e PHP)</span></p>
-  </div>
+    <section class="section section-wrap" id="conteudos">
+      <div class="section-heading section-heading--row">
+        <div><p class="eyebrow">ESCOLHA SEU CAMINHO</p><h2>O que você quer <span class="gradient-text">criar?</span></h2></div>
+        <p>Os conteúdos podem ser adaptados ao seu conhecimento e objetivo.</p>
+      </div>
+      <div class="courses-grid">
+        <article class="course-card course-card--featured">
+          <div class="course-card__visual visual-code"><span class="visual-label">01 / WEB</span><div class="visual-code__symbols">&lt;div&gt;<br>&nbsp;&nbsp;Hello,<br>&nbsp;&nbsp;<span>world!</span><br>&lt;/div&gt;</div><span class="visual-orbit"></span></div>
+          <div class="course-card__body"><p class="course-kicker">CRIAÇÃO PARA A WEB</p><h3>Desenvolvimento Web</h3><p>Construa páginas e aplicações e entenda como HTML, CSS, JavaScript e React trabalham juntos.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div></div>
+        </article>
+        <article class="course-card">
+          <div class="course-card__visual visual-game"><span class="visual-label">02 / GAMES</span><div class="pixel-scene"><span class="pixel-star">✦</span><span class="pixel-platform"></span><span class="pixel-player"></span><span class="pixel-coin">●</span></div></div>
+          <div class="course-card__body"><p class="course-kicker">JOGOS DIGITAIS</p><h3>Desenvolvimento de Games</h3><p>Explore lógica de programação e mecânicas de jogos enquanto dá vida às suas próprias ideias.</p><div class="tag-list"><span>GDevelop</span><span>Unity</span><span>Lógica</span><span>Game design</span></div></div>
+        </article>
+        <article class="course-card">
+          <div class="course-card__visual visual-ai"><span class="visual-label">03 / IA</span><div class="ai-orb">✳</div><span class="ai-caption">IDEIA → PROTÓTIPO</span></div>
+          <div class="course-card__body"><p class="course-kicker">TECNOLOGIA E CRIATIVIDADE</p><h3>Inteligência Artificial</h3><p>Aprenda a usar ferramentas de IA com intenção, criar bons prompts e apoiar seus projetos.</p><div class="tag-list"><span>Prompts</span><span>Ferramentas de IA</span><span>Projetos</span></div></div>
+        </article>
+      </div>
+      <p class="section-note">A disponibilidade de cada conteúdo depende do objetivo combinado para as aulas. Consulte antes de agendar.</p>
+    </section>
 
-</main>
+    <section class="benefit-band">
+      <div class="section-wrap benefit-band__inner">
+        <div><p class="eyebrow">POR QUE APRENDER COM ORIENTAÇÃO?</p><h2>Você não precisa enfrentar os erros sozinho.</h2></div>
+        <div class="benefit-list">
+          <p><span>✓</span> Explicações passo a passo</p>
+          <p><span>✓</span> Exercícios com orientação</p>
+          <p><span>✓</span> Espaço para perguntar e revisar</p>
+          <p><span>✓</span> Prática conectada aos seus interesses</p>
+        </div>
+      </div>
+    </section>
 
-<footer class="footer">
-  <p class="footer__quote">"
-    Gustavo Lima - Direitos Reservados &copy;
-  </p>
-</footer>
+    <section class="section section-wrap about-section">
+      <div class="about-photo-wrap"><img src="./img/Profile.png" alt="Foto de Gustavo Lima" class="about-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="about-placeholder" aria-hidden="true">GL</div><span class="about-sticker">Professor<br>de tecnologia</span></div>
+      <div class="about-copy"><p class="eyebrow">QUEM VAI TE ACOMPANHAR</p><h2>Prazer, sou o <span class="gradient-text">Gustavo.</span></h2><p>Sou professor de tecnologia e desenvolvimento, e gosto de transformar assuntos complexos em experiências práticas e acessíveis.</p><p>Nas aulas, meu objetivo é ajudar você a compreender o que está fazendo — não apenas copiar um código ou seguir uma receita.</p><a class="text-link" href="https://www.superprof.com.br/ir/17247433-715a6d" target="_blank" rel="noopener noreferrer">Conheça meu perfil e entre em contato <span aria-hidden="true">↗</span></a></div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="section section-wrap faq-section" id="duvidas">
+      <div class="section-heading"><p class="eyebrow">ANTES DE COMEÇAR</p><h2>Dúvidas <span class="gradient-text">frequentes.</span></h2></div>
+      <div class="faq-list">
+        <details><summary>Preciso ter experiência com programação?</summary><p>Não necessariamente. Conte seu nível atual no primeiro contato para que o conteúdo seja alinhado à sua experiência.</p></details>
+        <details><summary>As aulas são online?</summary><p>Esta página é voltada para aulas online. Combine previamente a plataforma, os horários e os recursos necessários no momento do contato.</p></details>
+        <details><summary>Para quem são as aulas?</summary><p>O conteúdo pode ser adaptado a diferentes níveis. Informe a idade, a experiência e o objetivo de quem vai estudar para confirmar se a proposta é adequada.</p></details>
+        <details><summary>Quanto custa e como agendo?</summary><p>O valor, a duração, a disponibilidade e as condições devem ser confirmados diretamente no perfil de contato. Use o botão abaixo para conversar sobre as opções.</p></details>
+        <details><summary>Preciso instalar algum programa?</summary><p>Depende do conteúdo. Antes da aula, você receberá orientação sobre as ferramentas necessárias e as opções gratuitas disponíveis quando aplicável.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta section-wrap">
+      <div class="final-cta__glow" aria-hidden="true"></div>
+      <p class="eyebrow">SEU PRÓXIMO PASSO</p>
+      <h2>Uma ideia na cabeça pode virar <span class="gradient-text">seu próximo projeto.</span></h2>
+      <p>Me conte o que você quer aprender e vamos verificar qual formato de aula faz sentido para você.</p>
+      <a class="button button--primary button--large" href="https://www.superprof.com.br/ir/17247433-715a6d" target="_blank" rel="noopener noreferrer">Quero conversar sobre as aulas <span aria-hidden="true">↗</span></a>
+      <small>Sem compromisso: entre em contato para tirar suas dúvidas e consultar valores e horários.</small>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#inicio"><span class="brand__mark">&lt;GL/&gt;</span><span>Gustavo Lima<span class="brand__dot">.</span></span></a>
+    <p>Aprender. Praticar. Criar.</p>
+    <span class="footer-copy">© <span id="year"></span> Gustavo Lima. Todos os direitos reservados.</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

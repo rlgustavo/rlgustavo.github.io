@@ -1,60 +1,45 @@
-# 🟣 Gustavo Lima — Links
+# Landing page — Aulas online do Gustavo Lima
 
-Página de links (estilo Linktree) de **Gustavo Lima**, professor de Jogos Digitais, Programação e Tecnologia. É o ponto de partida único que ele compartilha com quem quer conhecer seu trabalho.
+Este pacote contém uma página de vendas responsiva para divulgar aulas online de programação, desenvolvimento de jogos e tecnologia/IA.
 
-🔗 **Ver online:** _adicione aqui o link do GitHub Pages depois de publicar_
+## Arquivos
 
-![preview](./img/Profile.png)
+- `index.html`: conteúdo e estrutura das seções.
+- `style.css`: cores, layout, cartões, efeitos e adaptação para celular.
+- `script.js`: ano automático no rodapé e comportamento da seção de dúvidas.
+- `img/`: coloque aqui as imagens utilizadas no site.
 
-## ✨ Sobre o projeto
+## Como instalar no seu projeto atual
 
-Site em HTML, CSS e JavaScript puros (sem frameworks e sem build), com:
+1. Faça uma cópia de segurança dos arquivos atuais.
+2. Substitua o conteúdo de `index.html`, `style.css` e `script.js` pelos arquivos deste pacote.
+3. Mantenha a pasta `img` que você já possui. O HTML usa `./img/Profile.png` para a foto.
+4. Confira se o nome da foto é exatamente `Profile.png` (maiúsculas e minúsculas importam quando o site está publicado no GitHub Pages).
+5. Abra `index.html` no navegador e teste todos os links.
+6. Publique as alterações no GitHub Pages.
 
-- Tema roxo-tech dark, com efeito de "terminal" digitando os papéis do Gustavo (professor, dev, educador);
-- Pilha de links estilo Linktree (GitHub, LinkedIn, itch.io + um card "em breve" para novos projetos);
-- Faixa discreta com os logos das escolas onde leciona;
-- Animações de entrada em cascata e layout 100% responsivo, do celular ao desktop.
+## Antes de divulgar, personalize estas informações
 
-## 🗂️ Estrutura
+O site evita inventar preços, resultados ou condições. Para deixar a página mais convincente, confirme e atualize:
 
-```
-.
-├── index.html      → estrutura e conteúdo do site
-├── style.css       → todo o visual (cores, fontes, layout)
-├── script.js       → interatividade (digitação, menu, scroll)
-├── README.md
-└── img/
-    ├── Profile.png
-    ├── MapleBear.png
-    ├── Avenues.png
-    └── Supergeeks.png
-```
+1. **Público:** qual idade/nível você atende (crianças, adolescentes, adultos, iniciantes etc.).
+2. **Formato:** duração de cada aula, plataforma usada, se é individual ou em grupo.
+3. **Preço:** valor por aula e/ou pacote, política de cancelamento e formas de pagamento.
+4. **Agenda:** dias e horários disponíveis e fuso horário.
+5. **Conteúdo:** quais tecnologias você realmente oferece nas aulas. Remova tags ou cursos que não estiverem disponíveis.
+6. **Contato:** o link atual aponta para seu perfil da Superprof: `https://www.superprof.com.br/ir/17247433-715a6d`. Verifique se é o endereço que deseja divulgar.
+7. **Prova social opcional:** adicione depoimentos reais somente com autorização dos alunos/responsáveis. Não invente avaliações.
+8. **Imagem:** use uma foto profissional sua e confira se tem boa qualidade no celular.
 
-## 🎨 Como personalizar
+## Onde editar os textos
 
-Praticamente tudo pode ser ajustado sem tocar na lógica do site:
+- Título e apresentação inicial: seção `<section class="hero ...">` em `index.html`.
+- Cartões de conteúdos: seção `id="conteudos"`.
+- Sua apresentação: seção `about-section`.
+- Perguntas frequentes: seção `id="duvidas"`.
+- Botões de contato: procure por `superprof.com.br/ir/17247433-715a6d`.
+- Cores e fontes: variáveis no início de `style.css`.
 
-| Quero mudar...                  | Onde mexer                                              |
-|----------------------------------|-----------------------------------------------------------|
-| Cores do site                    | Bloco `:root` no topo de `style.css`                     |
-| Fontes                           | Variáveis `--font-*` em `style.css` (+ link no `<head>`) |
-| Textos que aparecem digitando    | Lista `ROLES` no topo de `script.js`                     |
-| Adicionar/remover um link        | Copiar ou apagar um bloco `<a class="link-item">` dentro de `<nav class="links-stack">` no `index.html` |
-| Fotos/logos                      | Substituir os arquivos em `img/` mantendo o mesmo nome    |
+## Observação importante
 
-## 🚀 Publicando no GitHub Pages
-
-1. Faça o commit de todos os arquivos (`index.html`, `style.css`, `script.js`, pasta `img/`);
-2. No repositório, vá em **Settings → Pages**;
-3. Em **Source**, selecione a branch `main` e a pasta `/root`;
-4. Salve — em alguns minutos o site estará disponível em `https://rlgustavo.github.io/nome-do-repo/`.
-
-## 🤝 Contato
-
-- GitHub: [github.com/rlgustavo](https://github.com/rlgustavo)
-- LinkedIn: [linkedin.com/in/rlgustavo](https://linkedin.com/in/rlgustavo)
-- itch.io: [rlgustavo.itch.io](https://rlgustavo.itch.io)
-
----
-
-🛠️ Site construído com apoio do [Claude](https://claude.com), assistente de IA da Anthropic.
+Esta é uma landing page estática. Os botões encaminham para a Superprof; não há checkout, cobrança ou agendamento automático integrado. Para vender diretamente pelo site, será necessário configurar uma plataforma de pagamento/agendamento e informar as condições comerciais reais.
