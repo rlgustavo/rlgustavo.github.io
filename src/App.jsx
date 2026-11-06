@@ -1,27 +1,32 @@
 
 import "./App.css";
 
-// Componente principal do nosso portfólio
+// Importamos o componente Header
+import Header from "./components/Header";
+
 function App() {
   return (
     <div>
-      <h1>Bem vindo ao Site do Gustavo Lima</h1>
+      {/* Nosso menu de navegação */}
+      <Header />
 
-      <h2>Desenvolvedor de Jogos e Professor</h2>
+      {/* Conteúdo inicial do portfólio */}
+      <section id="inicio">
+        <h1>Olá, eu sou Gustavo Lima!</h1>
 
-      <p>
-        Bem-vindo ao meu portfólio pessoal.
-        Aqui você conhecerá meus projetos.
-      </p>
+        <h2>Desenvolvedor de Jogos e Professor</h2>
 
-      <p> Sou Bom em Cubo Magico </p>
-      <p> Sou Programador </p>
+        <p>
+          Bem-vindo ao meu portfólio pessoal.
+          Aqui você conhecerá meus projetos.
+        </p>
+      </section>
 
-      <button>Conhecer meus projetos</button>
-      <button> Meu GitHub </button>
+      <section id="habilidade">
+            oi
+      </section>
     </div>
   );
 }
 
-// Permite utilizar o componente em outros arquivos
 export default App;
