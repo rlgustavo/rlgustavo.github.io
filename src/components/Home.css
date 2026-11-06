@@ -1,0 +1,113 @@
+    
+/* Seção principal */
+.home {
+  min-height: 85vh;
+  padding: 80px 8%;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #0b0b12;
+}
+
+/* Área dos textos */
+.home-conteudo {
+  max-width: 750px;
+}
+
+/* Texto de introdução */
+.home-introducao {
+  color: #a78bfa;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Nome principal */
+.home h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+
+/* Destaque no nome */
+.home h1 span {
+  color: #a78bfa;
+}
+
+/* Título profissional */
+.home h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+/* Descrição */
+.home-descricao {
+  color: #a1a1aa;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+
+/* Área que organiza os botões */
+.home-botoes {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+/* Aparência dos botões */
+.botao-link {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  background-color: #a78bfa;
+  color: #11121b;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* Efeito quando o mouse passa */
+.botao-link:hover {
+  background-color: #8b5cf6;
+  color: white;
+
+  transform: translateY(-4px);
+}
+
+
+/* Estilos para celulares */
+@media (max-width: 768px) {
+
+  .home {
+    padding: 60px 6%;
+    min-height: auto;
+  }
+
+  .home h1 {
+    font-size: 36px;
+  }
+
+  .home h2 {
+    font-size: 20px;
+  }
+
+  .home-descricao {
+    font-size: 16px;
+  }
+
+  .home-botoes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
