@@ -45,7 +45,7 @@ const projetos = [
     descricao: 'Protótipos de jogos e experiências interativas com foco em desenvolvimento 2D, 3D e imersivo.',
     tecnologias: ['Unity', 'C#', 'Games'],
     codigo: '',
-    demo: 'https://rlgustavo.itch.io/',
+    demo: '',
     arte: 'art-four',
     simbolo: 'i-game',
     rotulo: 'GAME DEV'
@@ -119,3 +119,61 @@ filtros.forEach(botao => botao.addEventListener('click',() => {
 }));
 renderizarProjetos();
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+
+/*
+  CURSOS — CADASTRE SEUS CURSOS AQUI QUANDO ESTIVEREM PRONTOS.
+  Se deixar vazio, a seção mostrará o aviso "Em breve".
+  Para adicionar um curso, copie o modelo abaixo para dentro da lista:
+
+  {
+    titulo: 'Nome do curso',
+    formato: 'Online ou presencial',
+    descricao: 'Uma breve explicação sobre o curso.',
+    topicos: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://seusite.com/curso'
+  }
+
+  Deixe link como '' se ainda não existir página de inscrição.
+*/
+const cursos = [];
+
+const gradeCursos = document.querySelector('#course-grid');
+const avisoCursos = document.querySelector('#course-empty');
+const contadorCursos = document.querySelector('#course-count');
+
+function criarCartaoCurso(curso) {
+  const card = elemento('article', 'course-card');
+  const topo = elemento('div', 'course-card-top');
+  const icone = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  icone.setAttribute('class', 'icon');
+  icone.setAttribute('aria-hidden', 'true');
+  const uso = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+  uso.setAttribute('href', '#i-book');
+  icone.appendChild(uso);
+  topo.append(icone, elemento('span', 'course-format', curso.formato || 'Curso'));
+  const titulo = elemento('h3', '', curso.titulo || 'Curso sem título');
+  const descricao = elemento('p', '', curso.descricao || 'Descrição em breve.');
+  const tags = elemento('div', 'project-tags');
+  for (const topico of (curso.topicos || [])) {
+    tags.appendChild(elemento('span', 'tag', topico));
+  }
+  const rodape = elemento('div', 'course-card-bottom');
+  adicionarLink(rodape, 'Conhecer curso', curso.link, 'i-arrow');
+  if (!rodape.children.length) {
+    rodape.appendChild(elemento('span', 'course-soon', 'Detalhes em breve'));
+  }
+  card.append(topo, titulo, descricao, tags, rodape);
+  return card;
+}
+
+function renderizarCursos() {
+  const existemCursos = cursos.length > 0;
+  gradeCursos.hidden = !existemCursos;
+  avisoCursos.hidden = existemCursos;
+  contadorCursos.textContent = existemCursos
+    ? `${cursos.length} ${cursos.length === 1 ? 'curso' : 'cursos'}`
+    : 'Em preparação';
+  if (existemCursos) gradeCursos.replaceChildren(...cursos.map(criarCartaoCurso));
+}
+renderizarCursos();
