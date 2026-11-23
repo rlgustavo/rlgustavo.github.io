@@ -50,7 +50,7 @@ h3 { font-size: 1.35rem; letter-spacing: -.025em; }
 p { color: var(--muted); }
 .gradient-text { color: var(--accent-light); background: linear-gradient(100deg, #d4c5ff 5%, #a78bfa 48%, #f0a4f5 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--accent-light); font: 500 .72rem/1.4 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
-.status-dot, .chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 13px rgba(142, 230, 189, .75); }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 13px rgba(142, 230, 189, .75); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 13px; border: 1px solid transparent; border-radius: 999px; font-weight: 700; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease; }
 .button:hover { transform: translateY(-2px); }
 .button--primary { padding: 15px 22px; color: #150d24; background: linear-gradient(105deg, #d6c6ff, #b89bff 58%, #efb0f5); box-shadow: 0 10px 35px rgba(155, 114, 255, .2); }
@@ -84,29 +84,29 @@ p { color: var(--muted); }
 .proof-item strong, .proof-item small { display: block; }
 .proof-item strong { font-size: .78rem; }
 .proof-item small { margin-top: 2px; color: var(--muted); font-size: .68rem; }
-.hero-card { position: relative; padding: 25px; border: 1px solid var(--border); border-radius: 28px; background: linear-gradient(145deg, rgba(44,30,66,.85), rgba(17,11,29,.88)); box-shadow: var(--shadow); transform: rotate(1.2deg); }
-.code-window { overflow: hidden; border: 1px solid rgba(255,255,255,.09); border-radius: 15px; background: #100c19; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
-.code-window__top { height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,.07); color: #8e85a4; font: .65rem var(--font-mono); }
-.window-dots { display: flex; gap: 5px; }
-.window-dots i { width: 7px; height: 7px; border-radius: 50%; background: #ff6e76; }
-.window-dots i:nth-child(2) { background: #f6c66a; }
-.window-dots i:nth-child(3) { background: #7ddca5; }
-.window-top__right { color: #86dcb0; }
-.code-window__body { padding: 25px 24px 23px; font: .83rem/2.05 var(--font-mono); color: #e8e2f5; }
-.code-window__body p { color: inherit; }
-.code-comment { margin-bottom: 12px; color: #827895 !important; }
-.indent { padding-left: 20px; }
-.code-purple { color: #c6a7ff; }
-.code-blue { color: #8fcaff; }
-.code-green { color: #9ce6bd; }
-.code-orange { color: #ffc98d; }
-.code-spacer { height: 13px; }
-.code-result { margin-top: 18px; padding: 10px 12px; border: 1px solid rgba(142,230,189,.17); border-radius: 8px; background: rgba(142,230,189,.06); color: #b5e9ce; font-size: .7rem; }
-.code-result span { margin-right: 7px; }
-.floating-chip { position: absolute; display: flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1px solid rgba(212,197,255,.2); border-radius: 12px; background: #211633; box-shadow: 0 12px 30px rgba(0,0,0,.25); color: var(--text); font-size: .72rem; font-weight: 600; }
-.floating-chip--top { top: -17px; right: -19px; }
-.floating-chip--bottom { bottom: 30px; left: -22px; }
-.floating-chip--top:first-letter { color: var(--pink); }
+.hero-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: min(100%, 460px);
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: #211633;
+  box-shadow: var(--shadow);
+}
+.hero-card__photo { width: 100%; height: auto; }
+.hero-card__caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 3px;
+  padding: 54px clamp(18px, 5vw, 30px) 22px;
+  background: linear-gradient(transparent, rgba(13,8,22,.97));
+}
+.hero-card__caption strong { font: 700 clamp(1.3rem, 3vw, 1.9rem) var(--font-display); color: var(--text); }
+.hero-card__caption span { color: #e5daf7; font-size: .9rem; }
+
 
 /* 6. Faixa de áreas */
 .trust-strip { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 25px; padding-block: 25px; border-block: 1px solid rgba(255,255,255,.07); color: #9288a8; font: .69rem var(--font-mono); letter-spacing: .09em; }
@@ -164,11 +164,13 @@ p { color: var(--muted); }
 .benefit-list span { display: grid; place-items: center; flex: 0 0 23px; height: 23px; border-radius: 50%; background: rgba(142,230,189,.12); color: var(--green); font-size: .75rem; }
 
 /* 10. Sobre o professor */
-.about-section { display: grid; grid-template-columns: .75fr 1.25fr; align-items: center; gap: 90px; }
-.about-photo-wrap { position: relative; width: min(100%, 350px); aspect-ratio: .88; margin-inline: auto; padding: 13px; border: 1px solid var(--border); border-radius: 28px; background: linear-gradient(145deg, rgba(155,114,255,.18), rgba(236,140,245,.05)); }
-.about-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 18px; }
-.about-placeholder { display: none; place-items: center; width: 100%; height: 100%; border-radius: 18px; background: linear-gradient(145deg, #302049, #130d20); color: var(--accent-light); font: 700 4rem var(--font-display); }
-.about-sticker { position: absolute; right: -26px; bottom: 27px; padding: 12px 18px; border: 1px solid rgba(212,197,255,.25); border-radius: 13px; background: #211633; color: var(--accent-light); font-size: .76rem; font-weight: 700; line-height: 1.4; box-shadow: 0 15px 35px rgba(0,0,0,.25); }
+.about-section { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 64px; }
+.teaching { min-width: 0; padding: clamp(18px, 3vw, 28px); border: 1px solid var(--border); border-radius: var(--radius); background: rgba(24,16,38,.85); }
+.teaching h3 { margin-bottom: 16px; }
+.teaching__logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.teaching__logos li { display: grid; place-items: center; min-width: 0; height: 86px; padding: clamp(5px, 1.4vw, 12px); border-radius: 11px; background: #fff; }
+.teaching__logos img { width: 100%; height: 100%; max-height: 62px; object-fit: contain; }
+
 .about-copy .eyebrow { margin-bottom: 17px; }
 .about-copy h2 { margin-bottom: 22px; }
 .about-copy p:not(.eyebrow) { max-width: 620px; margin-bottom: 15px; }
@@ -208,7 +210,6 @@ p { color: var(--muted); }
   .header-nav { display: none; }
   .hero { grid-template-columns: 1fr; gap: 55px; padding-top: 75px; }
   .hero__content { max-width: 760px; }
-  .hero-card { width: min(100%, 570px); margin: auto; }
   .steps-grid, .courses-grid { grid-template-columns: repeat(2, 1fr); }
   .course-card:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: .85fr 1fr; }
   .course-card:last-child .course-card__visual { height: 100%; min-height: 220px; }
@@ -230,11 +231,7 @@ p { color: var(--muted); }
   .hero__actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero__proof { gap: 18px; margin-top: 34px; }
   .proof-item small { max-width: 135px; }
-  .hero-card { padding: 13px; border-radius: 21px; }
-  .code-window__body { padding: 19px 15px; font-size: .69rem; }
-  .floating-chip { font-size: .62rem; padding: 8px 10px; }
-  .floating-chip--top { right: -7px; }
-  .floating-chip--bottom { left: -7px; bottom: 19px; }
+  .hero-card { border-radius: 21px; }
   .trust-strip { gap: 10px 14px; padding-block: 20px; font-size: .57rem; }
   .trust-strip b { font-size: .65rem; }
   .section { padding-block: 72px; }
@@ -248,9 +245,7 @@ p { color: var(--muted); }
   .course-card__body > p:not(.course-kicker) { min-height: 0; }
   .benefit-band { padding-block: 53px; }
   .benefit-band__inner { grid-template-columns: 1fr; gap: 28px; }
-  .about-section { grid-template-columns: 1fr; gap: 42px; }
-  .about-photo-wrap { width: min(78%, 310px); }
-  .about-copy { text-align: left; }
+  .about-section { grid-template-columns: 1fr; gap: 32px; }
   .final-cta { margin-bottom: 48px; padding: 54px 22px; border-radius: 23px; }
   .final-cta .button { width: 100%; }
   .site-footer { flex-direction: column; align-items: flex-start; gap: 12px; padding: 27px 18px; }
